@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Sonar-test') {
 	steps {
-            withSonarQubeEnv('My SonarQube Server') {
+            withSonarQubeEnv('sonar') {
   
             println "${env.SONAR_HOST_URL}" 
 }}
