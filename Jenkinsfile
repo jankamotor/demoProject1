@@ -6,7 +6,8 @@ pipeline {
 	steps {
             withSonarQubeEnv('sonar') {
   
-            println "${env.SONAR_HOST_URL}" 
+           
+	    sh 'mvn clean package sonar:sonar'	 
 }}
                 
             
